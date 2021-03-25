@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Events</title>
+       <style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+    </style>
+    <script>
+        function eventover(){
+            document.getElementById("over").style.background="green"
+        }
+        function eventout(){
+            document.getElementById("out").style.background="yellow"
+        }
+        function eventclick(){
+            document.getElementById("click").style.background="grey"
+        }
+        function eventdblclick(){
+            document.getElementById("dblclick").style.background="pink"
+        }
+        function eventfocus(){
+            document.getElementById("focus").style.background="red"
+        }
+        function eventblur(){
+            var x = document.getElementById("blur")
+            x.value = x.value.toUpperCase();
+        }
+            </script>
+</head>
+<body>
+    <h1 style="text-align: center;">Javascript Events</h1>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            OnmouseOver:<br>
+        <label style="font-size: 14px;">mouseover the change button background-color</label><br>
+        <button onmouseover="eventover()"id="over"style="background-color: red;height: 30px;width: 200px;color: white;">Mouse over</button>
+    </div>
+        <div class="grid-item">
+            OnMouseOut:<br>
+            <label style="font-size: 14px;">mouseover the change button background-color</label><br>
+        <button onmouseout="eventout()"id="out"style="background-color: red;height: 30px;width: 200px;color: white;">Mouse over</button>
+        </div>
+        <div class="grid-item">
+            Onclick:<br>
+            <label style="font-size: 14px;">mouseover the change button background-color</label><br>
+        <button onclick="eventclick()" id="click" style="background-color: red;height: 30px;width: 200px;color: white;">Mouse over</button>
+        </div>  
+        <div class="grid-item">
+            Ondbclick:<br>
+            <label style="font-size: 14px;">mouseover the change button background-color</label><br>
+        <button ondblclick="eventdblclick()" id="dblclick" style="background-color: red;height: 30px;width: 200px;color: white;">Mouse over</button>
+        </div>
+        <div class="grid-item">
+            onfocus:<br>
+            <label style="font-size: 14px;">mouseover the change button background-color</label><br>
+            <input type="text" id="focus"onfocus="eventfocus()">
+        </div>
+            <div class="grid-item">
+            onblur:<br>
+            <label style="font-size: 14px;">mouseover the change button background-color</label><br>
+            <input type="text" id="blur" onblur="eventblur()">
+        </div>   
+      </div>
+   
+    
+
+  
+
+    
+</body>
+</html>
